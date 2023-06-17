@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>VIDEO GALLERY-Rohit's coders</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <div class="container">
+        <h1>HOW TO MAKE A VIDEO GALLERY</h1>
+        <div class="row">
+            <div class="col">
+                <div class="feature-img">
+
+                    <img src="images/barsath ki dhun.png" width="100%">
+                    <img src="file:///C:/Users/ASUS/Downloads/icons8-play-50.png" class="play-btn" onclick="playVideo('videos/Barsaat Ki Dhun Song.mp4')">
+                </div>
+            </div>
+            <div class="col">
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="images/zilla hilela.png">
+                        <img src="file:///C:/Users/ASUS/Downloads/icons8-play-50.png" class="play-btn" onclick="playVideo('Videos/Zilla Hilela - Jabariya Jodi - Sidharth Malhotra & Elli AvrRam - Tanishk Bagchi.mp4')">
+                    </div>
+                    <p>zilla hilela <br>JABARIYA JODI</p>
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="file:///C:/Users/ASUS/Downloads/rabba%20song%20.png">
+                        <img src="file:///C:/Users/ASUS/Downloads/icons8-play-50.png" class="play-btn" onclick="playVideo('file:///C:/Users/ASUS/Videos/4K%20Video%20Downloader/Heropanti%20Rabba%20Video%20Song%20%20%20Mohit%20Chauhan%20%20%20Tiger%20Shroff%20%20%20Kriti%20Sanon.mp4')">
+                    </div>
+                    <p> Rabba <br>HEROPANTI</p>
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="file:///C:/Users/ASUS/Downloads/jaddu%20ki%20jappi.jpg">
+                        <img src="file:///C:/Users/ASUS/Downloads/icons8-play-50.png" class="play-btn" onclick="playVideo('file:///C:/Users/ASUS/Videos/4K%20Video%20Downloader/Jadoo%20Ki%20Jhappi%20Lyrical%20Video%20-%20Ramaiya%20Vastavaiya%20%20%20Girish%20Kumar%20&%20Shruti%20%20%20Mika%20Singh,%20Neha%20Kakkar.mp4')">
+                    </div>
+                    <p> Jadoo Ki Jhappi<br>RAMAIYA VASTAVAIYA</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="video-player" id="videoPlayer">
+        <video width="100%" controls autoplay id="myVideo">
+            <source src="file:///C:/Users/ASUS/Videos/4K%20Video%20Downloader/Barsaat%20Ki%20Dhun%20Song%20%20%20Rochak%20K%20Ft.%20Jubin%20N%20%20%20Gurmeet%20C,%20Karishma%20S%20%20Rashmi%20V%20%20%20Ashish%20P%20%20%20Bhushan%20K.mp4" type="video/mp4">
+        </video>
+        <img src="file:///C:/Users/ASUS/Downloads/icons8-close-50.png" class="close-btn" onclick="stopVideo()">
+    </div>
+<script>
+    var videoPlayer = document.getElementById("videoPlayer");
+    var  myVideo= document.getElementById("myVideo");
+
+    function stopVideo(){
+         
+        videoPlayer.style.display="none";
+        videoPlayer.style.container="none";
+        
+    }
+    
+    function playVideo(file){
+        myVideo.src= file;
+        videoPlayer.style.display = "block";
+    }
+</script>
+
+
+</body>
+</html>
